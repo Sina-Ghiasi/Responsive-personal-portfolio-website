@@ -33,7 +33,6 @@ a {
   min-height: 100vh;
   display: block;
   padding: 0 30px;
-  opacity: 1;
 }
 .hidden {
   display: none !important;
@@ -85,7 +84,7 @@ a {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 15px;
+  margin: 0 -15px;
   position: relative;
 }
 .btn {
@@ -102,7 +101,7 @@ a {
   transform: scale(1.05);
 }
 .shadow-dark {
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.10);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.1);
 }
 .aside {
   width: 270px;
@@ -454,7 +453,7 @@ h3.my-professtion {
   transition: all 0.3s ease;
 }
 .service .service-item .service-item-inner:hover {
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.10);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.1);
 }
 .service .service-item .service-item-inner .icon {
   width: 60px;
@@ -572,10 +571,10 @@ h3.my-professtion {
   flex: 0 0 100%;
   max-width: 100%;
 }
-.contact .contact-form .form-item{
+.contact .contact-form .form-item {
   margin-bottom: 30px;
 }
-.contact .contact-form .form-item .form-control{
+.contact .contact-form .form-item .form-control {
   width: 100%;
   height: 40px;
   border-radius: 10px;
@@ -587,16 +586,63 @@ h3.my-professtion {
   color: var(--text-slate-600);
   transition: all 0.3s ease;
 }
-.contact .contact-form .form-item .form-control:focus{
-  box-shadow: 0 0 20px rgba(48, 4, 77, 0.10);
+.contact .contact-form .form-item .form-control:focus {
+  box-shadow: 0 0 20px rgba(48, 4, 77, 0.1);
 }
-.contact .contact-form .form-item textarea.form-control{
+.contact .contact-form .form-item textarea.form-control {
   height: 140px;
 }
-.contact .contact-form .btn{
+.contact .contact-form .btn {
   height: 50px;
   padding: 0 50px;
   border: none;
   direction: rtl;
   font-family: "vazir", Helvetica, sans-serif;
+}
+/* responsive */
+@media (max-width: 1199px) {
+  .aside {
+    right: -270px;
+  }
+
+  .main-content {
+    padding-right: 0;
+  }
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .main-content .home.section .container .row {
+    flex-direction: column-reverse;
+  }
+  .about .about-content .learning,
+  .about .about-content .experience,
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home .home-img {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .service .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .contact .contact-form .col-6,
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .service .service-item,
+  .about .about-content .skills,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
