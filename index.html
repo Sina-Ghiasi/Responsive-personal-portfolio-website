@@ -8,13 +8,21 @@
     <title>sina ghiasi</title>
     <!-- CSS files -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/color-1.css">
+    <link rel="stylesheet" href="css/skins/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.min.css"
         integrity="sha512-FOp1/1tT19/xw6wkob5zvDLQUPFTgmYy6fXIKpo/nvZyMiyhe72YNhgSRlrE/FLS8OgYFONMGvqazSVLbO2/6Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="css/skins/color-6.css" class="alternate-style" title="color-6" disabled>
+    <link rel="stylesheet" href="css/style-switcher.css">
 </head>
 
 <body>
@@ -74,8 +82,10 @@
                                 <div class="about-text padding-rl-15">
                                     <h3>من سینا قیاسی و یک <span>توسعه دهنده وب</span> هستم</h3>
                                     <p>
-                                        دانشجوی رشته مهندسی کامپیوتر ( نرم افزار ) هستم و تجربه دو سال کار در زمینه توسعه وردپرس دارم و درزمینه توسعه وب فعالیت میکنم اما مشتاق در زمینه توسعه وب
-                                        با جاوا اسکریپت و کتابخانه react هستم . فردی پر تلاش هستم که برای رسیدن به اهدافم قدم بر میدارم و خوشحال میشوم در این مسیر تجربه های جدیدی پیدا کنم . 
+                                        دانشجوی رشته مهندسی کامپیوتر ( نرم افزار ) هستم و تجربه دو سال کار در زمینه
+                                        توسعه وردپرس دارم و درزمینه توسعه وب فعالیت میکنم اما مشتاق در زمینه توسعه وب
+                                        با جاوا اسکریپت و کتابخانه react هستم . فردی پر تلاش هستم که برای رسیدن به
+                                        اهدافم قدم بر میدارم و خوشحال میشوم در این مسیر تجربه های جدیدی پیدا کنم .
                                     </p>
                                 </div>
                             </div>
@@ -454,8 +464,28 @@
         <!-- Main content end -->
     </div>
     <!-- Main container end -->
+    <!-- Style switcher start -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas fa-moon"></i>
+        </div>
+        <h4>رنگ های قالب</h4>
+        <div class="colors">
+            <span class="color-1 color-selected" onclick="setActiveColor('color-1')"></span>
+            <span class="color-2" onclick="setActiveColor('color-2')"></span>
+            <span class="color-3" onclick="setActiveColor('color-3')"></span>
+            <span class="color-4" onclick="setActiveColor('color-4')"></span>
+            <span class="color-5" onclick="setActiveColor('color-5')"></span>
+            <span class="color-6" onclick="setActiveColor('color-6')"></span>
+        </div>
+    </div>
+    <!-- Style switcher end -->
     <!-- JS files -->
     <script src="js/script.js"></script>
+    <script src="js/style-switcher.js"></script>
 </body>
 
 </html>
