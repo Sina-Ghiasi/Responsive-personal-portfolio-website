@@ -37,27 +37,28 @@
                 <span></span>
             </div>
             <ul class="nav">
-                <li><a href="#" class="active"><i class="fa fa-house-chimney"></i> خانه</a></li>
-                <li><a href="#"><i class="fa fa-user-tie"></i> درباره من</a></li>
-                <li><a href="#"><i class="fa fa-list-ul"></i> خدمات</a></li>
-                <li><a href="#"><i class="fa fa-briefcase"></i> نمونه کارها</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i> تماس با من</a></li>
+                <li><a href="#home" class="active"><i class="fa fa-house-chimney"></i> خانه</a></li>
+                <li><a href="#about"><i class="fa fa-user-tie"></i> درباره من</a></li>
+                <li><a href="#services"><i class="fa fa-list-ul"></i> خدمات</a></li>
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i> نمونه کارها</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i> تماس با من</a></li>
             </ul>
         </div>
         <!-- Aside end -->
         <!-- Main content start -->
         <div class="main-content">
             <!-- Home section start -->
-            <section class="home section">
+            <section class="home section active" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padding-rl-15">
                             <h3 class="hello">سلام ، من <span>سینا قیاسی</span></h3>
-                            <h3 class="my-professtion">یک <span class="typing">توسعه دهنده وب</span> هستم</h3>
+                            <h3 class="my-professtion">یک <span id="typing">توسعه دهنده وب</span> هستم
+                            </h3>
                             <p> برنامه نویس و دانشجوی رشته مهندسی کامپیوتر که تخصصم در زمینه طراحی و توسعه فرانت ، وب و
                                 ..
                             </p>
-                            <a href="#contact" class="btn hire-me">ارتباط با من</a>
+                            <a href="#contact" data-section-index="0" class="btn contact-me">ارتباط با من</a>
                         </div>
                         <div class="home-img padding-rl-15">
                             <img src="images/me.png" alt="سینا قیاسی">
@@ -67,7 +68,7 @@
             </section>
             <!-- Home section end -->
             <!-- About section start -->
-            <section class="about section">
+            <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-rl-15">
@@ -111,7 +112,8 @@
                                     <div class="row">
                                         <div class="buttons padding-rl-15">
                                             <a href="#" class="btn">دانلود رزومه</a>
-                                            <a href="#contact" class="btn hire-me">تماس با من</a>
+                                            <a href="#contact" data-section-index="1" class="btn contact-me">تماس با
+                                                من</a>
                                         </div>
                                     </div>
                                 </div>
@@ -280,8 +282,8 @@
                 </div>
             </section>
             <!-- About section end -->
-            <!-- Service section start -->
-            <section class="service section">
+            <!-- Services section start -->
+            <section class="services section" id="services">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-rl-15">
@@ -326,9 +328,9 @@
                     </div>
                 </div>
             </section>
-            <!-- Service section end -->
+            <!-- Services section end -->
             <!-- Portfolio section start -->
-            <section class="portfolio section">
+            <section class="portfolio section" id="portfolio">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-rl-15">
@@ -388,7 +390,7 @@
             </section>
             <!-- Portfolio section end -->
             <!-- Contact section start -->
-            <section class="contact section">
+            <section class="contact section" id="contact">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-rl-15">
@@ -445,7 +447,7 @@
                             <div class="row">
                                 <div class="form-item col-12 padding-rl-15">
                                     <div class="form-group">
-                                        <textarea class="form-control" name="" id="" placeholder="پیام"></textarea>
+                                        <textarea class="form-control" name="" id="" placeholder="پیام"> </textarea>
                                     </div>
                                 </div>
                             </div>
@@ -484,6 +486,8 @@
     </div>
     <!-- Style switcher end -->
     <!-- JS files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
 </body>

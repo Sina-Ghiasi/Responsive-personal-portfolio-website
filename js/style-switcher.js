@@ -8,6 +8,12 @@ window.addEventListener("scroll", () => {
   if (document.querySelector(".style-switcher").classList.contains("open"))
     document.querySelector(".style-switcher").classList.remove("open");
 });
+sections.forEach((section) => {
+  section.addEventListener("scroll", () => {
+    if (document.querySelector(".style-switcher").classList.contains("open"))
+      document.querySelector(".style-switcher").classList.remove("open");
+  });
+});
 //change theme colors
 const alternateStyles = document.querySelectorAll(".alternate-style");
 const setActiveColor = function (color) {
@@ -37,3 +43,19 @@ dayNight.addEventListener("click", () => {
   dayNight.querySelector("i").classList.toggle("fa-moon");
   document.body.classList.toggle("dark");
 });
+//detect user prefers
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  document.body.classList.add("dark");
+}
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (event) => {
+    if (event.matches) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  });
